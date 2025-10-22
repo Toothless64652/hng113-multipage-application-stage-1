@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - HNG Stage 1</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav role="navigation" aria-label="Main navigation">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="contact.html" aria-current="page">Contact Us</a></li>
+                <li><a href="about.html">About Me</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <h1>Contact Us</h1>
+            <p>Get in touch with me! I'd love to hear from you.</p>
+        </section>
+
+        <section class="contact-form-section">
+            <form id="contactForm" novalidate aria-label="Contact form">
+                <div class="form-group">
+                    <label for="fullName" class="required">Full Name</label>
+                    <input 
+                        type="text" 
+                        id="fullName" 
+                        name="fullName" 
+                        data-testid="test-contact-name"
+                        required 
+                        aria-describedby="name-error"
+                        autocomplete="name"
+                    >
+                    <div id="name-error" data-testid="test-contact-error-name" class="error-message" role="alert" aria-live="polite"></div>
+                </div>
+
+                <div class="form-group">
+                    <label for="email" class="required">Email Address</label>
+                    <input 
+                        type="email" 
+                        id="email" 
+                        name="email" 
+                        data-testid="test-contact-email"
+                        required 
+                        aria-describedby="email-error"
+                        autocomplete="email"
+                    >
+                    <div id="email-error" data-testid="test-contact-error-email" class="error-message" role="alert" aria-live="polite"></div>
+                </div>
+
+                <div class="form-group">
+                    <label for="subject" class="required">Subject</label>
+                    <input 
+                        type="text" 
+                        id="subject" 
+                        name="subject" 
+                        data-testid="test-contact-subject"
+                        required 
+                        aria-describedby="subject-error"
+                    >
+                    <div id="subject-error" data-testid="test-contact-error-subject" class="error-message" role="alert" aria-live="polite"></div>
+                </div>
+
+                <div class="form-group">
+                    <label for="message" class="required">Message</label>
+                    <textarea 
+                        id="message" 
+                        name="message" 
+                        data-testid="test-contact-message"
+                        required 
+                        rows="5"
+                        aria-describedby="message-error"
+                        placeholder="Please write at least 10 characters..."
+                    ></textarea>
+                    <div id="message-error" data-testid="test-contact-error-message" class="error-message" role="alert" aria-live="polite"></div>
+                </div>
+
+                <div class="form-group">
+                    <button type="submit" data-testid="test-contact-submit" class="submit-button">
+                        Send Message
+                    </button>
+                </div>
+
+                <div id="success-message" data-testid="test-contact-success" class="success-message" role="alert" aria-live="polite" style="display: none;">
+                    <h3>Thank you!</h3>
+                    <p>Your message has been sent successfully. I'll get back to you soon!</p>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 HammedT19 HNG Stage 1 Project. Built with accessibility and responsiveness in mind.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
