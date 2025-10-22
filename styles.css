@@ -28,7 +28,7 @@ body {
     position: absolute;
     top: -40px;
     left: 6px;
-    background: #000;
+    background: red;
     color: #fff;
     padding: 8px;
     text-decoration: none;
@@ -582,3 +582,4 @@ footer {
         scroll-behavior: auto;
     }
 }
+
